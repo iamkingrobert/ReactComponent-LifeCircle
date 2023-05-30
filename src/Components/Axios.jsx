@@ -3,21 +3,23 @@ import axios from 'axios';
 
 // Functional Methods for fetching data from API
 export default function Axios() {
-    const [todo, setTodo] = useState([])
+    const [users, setUsers] = useState([])
 
     useEffect(() =>{
-        axios.get('https://jsonplaceholder.typicode.com/todos/')
-        .then(result => setTodo(result.data)
+        axios.get('https://jsonplaceholder.typicode.com/users/')
+        .then(result => setUsers(result.data)
         .catch(err => console.log(err)));
        
     },[])
   return (
     <div>
        <h1>Axios API Calls</h1> 
-       {todo.map((item)=>{
+       {users.map((item)=>{
         return(
             <div key={item.id}>
-            <h2>Title: {item.title}</h2>
+            <h2>Name: {item.name}</h2>
+            <h2>Name: {item.username}</h2>
+            <h2>Name: {item.email}</h2>
             </div>
         )
        })}
