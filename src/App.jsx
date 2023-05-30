@@ -1,5 +1,6 @@
 import './App.css'
-import API from './Components/API'
+// import API from './Components/API'
+import Axios from './Components/Axios'
 // import ReactLifeCircle from './Components/ReactLifeCircle'
 // import ReactLifeCircleClass from './Components/ReactLifeCircleClass'
 
@@ -24,7 +25,8 @@ function App() {
     <>
      {/* <ReactLifeCircleClass/>  */}
      {/* <ReactLifeCircle/> */}
-     <API/>
+     {/* <API/> */}
+     <Axios/>
     </>
   )
 }

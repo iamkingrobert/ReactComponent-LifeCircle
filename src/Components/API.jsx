@@ -1,4 +1,3 @@
-
 import { Component } from 'react'
 export default class API extends Component {
     constructor(){
@@ -8,7 +7,10 @@ export default class API extends Component {
     componentDidMount(){
         fetch('https://jsonplaceholder.typicode.com/posts/')
         .then(results=> results.json())
-        .then(posts=> this.setState({data: posts}))      
+        .then(posts=> this.setState({data: posts}))
+        .catch((error)=>{
+          console.log(error)
+        })      
     }
   render() {
     return (
@@ -26,11 +28,4 @@ export default class API extends Component {
 }
 
 
-//Functional Methods
-// export default function API() {
-//   return (
-//     <div>
-        
-//     </div>
-//   )
-// }
+
